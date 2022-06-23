@@ -9,52 +9,10 @@ a{
     text-decoration: none;
 }
 
-/* ESTILO HEADER */
 
-.header1 {
-    background-color: #08708A;
-    display: flex;
-    height: 40px;
-    padding: 10px;
-    margin: 0;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.icon-header{
-    display: inline-block;
-    padding-left: 10px;
-
-}
-
-.icon-2{
-    position: center;
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 85px;
-}
-
-
-
-.header2 {
-    background-color: coral;
-    display: flex;
-    height: 40px;
-    padding: 10px;
-    margin: 0;
-    align-items: center;
-    flex-direction: center;
-    justify-content: space-between;
-    position: center;
-
-}
-
-
-/* FORMULARIO */ 
+/*---------------------------------------------------------------------------------------------------------*/
+/* ------------ FORMULARIO ------------------------- */
+/*---------------------------------------------------------------------------------------------------------*/
 
 .body-formulario {
     height: 100vh;
@@ -74,6 +32,7 @@ a{
     display: flex;
     justify-content: space-around;
     transition:  all .5s ease-out;
+    
 }
 
 .welcome-back {
@@ -197,101 +156,48 @@ a{
 }
 
 /*---------------------------------------------------------------------------------------------------------*/
-/* ------------ CARRUSEL ------------------------- */
+/* ------------ CARRITO DE COMPRAS ------------------------- */
 /*---------------------------------------------------------------------------------------------------------*/
 
-.slider {
+.carrito {
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
     width: 100%;
-    margin: auto;
-    overflow: hidden;
 }
 
-.slider ul{
+.table__productos{
     display: flex;
-    padding: 0;
-    width: 400%;
-
-    animation: cambio 20s infinite alternate;
 }
 
-.slider li{
-    width: 100%;
-    list-style: none;
+.table__productos > img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
 }
 
-.slider img {
-    width: 100%;
+.table_cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
 }
 
-@keyframes cambio {
-    0%{ margin-left: 0;}
-    20%{ margin-left: 0;}
 
-    25%{ margin-left: -100%;}
-    45%{ margin-left: -100%;}
 
-    50%{ margin-left: -200%;}
-    70%{ margin-left: -200%;}
-    
-    75%{ margin-left: -300%;}
-    100%{ margin-left: -300%;}
-}
+
+
+
+
+
 
 /*---------------------------------------------------------------------------------------------------------*/
-/* ------------ CARRUSEL 2------------------------- */
+/* ------------ FOOTER ------------------------- */
 /*---------------------------------------------------------------------------------------------------------*/
-
-.caja-slide{
-    background-color: #08708A;
-    position: center;
-    height: 350px;
-    width: 1920;
-}
-
-.slider2{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider2 ul{
-    display: flex;
-    padding: 0;
-    width: 400%;
-
-    animation: cambio 20s infinite alternate;
-}
-
-.slider2 li{
-    width: 100%;
-    list-style: none;
-}
-
-.slider2 img {
-    width: 100%;
-}
-
-@keyframes cambio {
-    0%{ margin-left: 0;}
-    20%{ margin-left: 0;}
-
-    25%{ margin-left: -100%;}
-    45%{ margin-left: -100%;}
-
-    50%{ margin-left: -200%;}
-    70%{ margin-left: -200%;}
-    
-    75%{ margin-left: -300%;}
-    100%{ margin-left: -300%;}
-}
-
-
-
-
-
-
-
-/*  FOOTER */
 
 .pie-pagina{
     width: 100%;

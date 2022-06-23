@@ -9,7 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 <!-- Iconos -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
     <script src="https://kit.fontawesome.com/b918cc0237.js" crossorigin="anonymous"></script>
+    
     <title>Proyecto PetShop</title>
     
 </head>
@@ -17,30 +19,29 @@
 <!-- HEADERS  -->    
     <header>
         <!-- PRIMER HEADER -->
-        <header class="p-3 mb-3 border-bottom" >
-          <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-              <a href="Index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        <header class="py-3 mb-3 border-bottom">
+          <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+            <div class="dropdown">
+              <a href="index.html" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/logopetshop02.png" height="70" alt="">
               </a>
+            </div>
       
-              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              </ul>
-              
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <button type="button" class="btn btn-warning">Carrito</button>
+            <div class="d-flex align-items-center">
+              <form class="w-100 me-3">
+                
               </form>
       
-              <div class="dropdown text-end">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              <div class="flex-shrink-0 dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="50" height="50" class="rounded-circle">
                 </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-                  <li><a class="dropdown-item" href="#">Iniciar Sesion</a></li>
-                  <li><a class="dropdown-item" href="#">Registrarse</a></li>
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                  <li><a class="dropdown-item" href="formularios.html">Iniciar Sesion</a></li>
+                  <li><a class="dropdown-item" href="formularios.html">Registrarse</a></li>
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#" aria-disabled="true">Sign out</a></li>
+                  <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
                 </ul>
               </div>
             </div>
@@ -48,13 +49,57 @@
         </header>
 
         <!-- SEGUNDO HEADER -->
-        <div class="header2">
-            <a class="icon-2" href="">Inicio</a>
-            <a class="icon-2" href="">Alimento</a>
-            <a class="icon-2" href="">Accesorios</a>
-            <a class="icon-2" href="">Ropa</a>
-            <a class="icon-2" href="">About us</a>
-        </div>
+        
+        <header class="container-fluid bg-white position-sticky top-0">
+          <ul
+            class="nav nav-pills mb-3 py-3 container" style="justify-content:space-between;"
+            id="pills-tab"
+            role="tablist">
+    
+            <li class="text-primary" role="presentation">
+                <a href="index.html" class="nav-link active">
+                    Home
+                </a>
+            </li>
+    
+            <li class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Productos
+                </a>
+            </li>
+    
+            <li  class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Accesorios
+                </a>
+              </li>
+    
+            <li class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Ropa
+                </a>
+            </li>
+    
+            <li class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Veterinaios
+                </a>
+            </li>
+    
+            <li class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Carrito
+                </a>
+            </li>
+    
+            <li class="nav-item" role="presentation">
+                <a href="index.html" class="nav-link">
+                    Nosotros
+                </a>
+            </li>
+          </ul>
+        </header>
+
     </header>
 
     
@@ -63,151 +108,186 @@
 
 <!-- Carrusel automatico -->
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/arbol.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+<div class="container">
+    <main>
+      <div class="py-5 text-center">
+        
+        <h2>Bienvenido a tu cuenta</h2>
+        <p class="lead">En Petshop nos especializamos en un servicio de exelenta para nuestros clientes y sus mascotas, y para poder brindar un mejor servicio te recomendamos registrarte para hacer seguimiento a tus comprar y solicitudes.</p>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/camino.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/flores.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+  
+      <div class="row g-5">
+        <div class="col-md-5 col-lg-4 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span style="color: orange;" class="">Inicio de Sesion</span>
+            <span class="badge bg-primary rounded-pill"></span>
+          </h4>
+          <ul class="list-group mb-3">
+            <label for="firstName" class="form-label">Correo de Usuario</label>
+            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
 
-<!-- Ofertas de productos -->
+            <label for="firstName" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="firstName" placeholder="" value="" required="">
+          </ul>
+  
+          <form class="card p-2">
+            <div class="input-group">
+                <button style="background-color: orange; border-color: brown;" class="w-100 btn btn-primary btn-lg" type="submit">Iniciar Sesion</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-7 col-lg-8">
+          <h4 style="color: orange;" class="mb-3">Registrar usuario</h4>
+          <form class="needs-validation" novalidate="">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Primer nombre</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Ingrese un Nombre valido.
+                </div>
+              </div>
 
-<div class="album py-5">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Segundo nombre</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Ingrese un Nombre valido.
+                </div>
+              </div>
 
-      <!-- PRIMERA IMAGEN DE OFERTA -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <!-- <img src="img/oloralibronuevo.gif" alt="150"> -->
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Ingrese un Apellido valido.
+                </div>
+              </div>
+        
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Ingrese un Apellido valido.
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="username" class="form-label">Rut</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">Rut de usuario</span>
+                  <input type="text" class="form-control" id="username" placeholder="Sin digito Verificador" required="">
+                <div class="invalid-feedback">
+                    Ingrese un rut valido.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email" placeholder="Tu@correo.com">
+                <div class="invalid-feedback">
+                  Porfavor veirica que tu correo este bien digitado.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="username" class="form-label">Telefono</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">+569</span>
+                  <input type="text" class="form-control" id="username" placeholder="Telefono Movil" required="">
+                <div class="invalid-feedback">
+                    Ingrese un numero de 9 dijitos valido.
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Calle terrible pulenta" required="">
+                <div class="invalid-feedback">
+                  Porfavor ingresa una dirreccion valida.
+                </div>
+              </div>
+  
+              <div class="col-12">
+                <label for="address2" class="form-label">Dirección 2<span class="text-muted">(Optional)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="1234 Calle terrible pulenta">
+              </div>
+  
+              <div class="col-md-5">
+                <label for="country" class="form-label">Región</label>
+                <select class="form-select" id="country" required="">
+                  <option value="">Seleccione una opcion</option>
+                  <option>Region Metropolitana</option>
+                  <option>Region Arica</option>
+                </select>
+                <div class="invalid-feedback">
+                  Porfavor seleccione una Region.
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <label for="state" class="form-label">Comuna</label>
+                <select class="form-select" id="state" required="">
+                  <option value="">Seleccione una opcion</option>
+                  <option>Santiago</option>
+                </select>
+                <div class="invalid-feedback">
+                  PPorfavor seleccione una Comuna.
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Codigo postal</label>
+                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Codigo postal requerido para Delivery.
+                </div>
+              </div>
+            </div>
+
+            <h4 class="mb-3"></h4>
+        
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label for="cc-name" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="cc-name" placeholder="" required="">
+                <small class="text-muted">Utilize mayusculas y simbolos.</small>
+                <div class="invalid-feedback">
+                  Ingrese una contraseña.
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <label for="cc-number" class="form-label">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="cc-number" placeholder="" required="">
+                <div class="invalid-feedback">
+                    La contraseña no coincide contraseña.
+                </div>
+              </div>
+  
+              <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="same-address">
+              <label class="form-check-label" for="same-address">Acepto los Terminos y condiciones.</label>
+            </div>
+  
+            <hr class="my-4">
+  
+            <button style="background-color: orange; border-color: brown;" class="w-100 btn btn-primary btn-lg" type="submit">Registrarse</button>
+          </form>
         </div>
       </div>
-
-       <!-- SEGUNDA IMAGEN DE OFERTA -->
-
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-        </div>
-      </div>
-
-       <!-- TERCERA IMAGEN DE OFERTA -->
-
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- VETERINARIOS -->
-
-<div class="px-4 py-5 my-5 text-center bg-light">
-  <h1 class="display-5 fw-bold">Centered hero</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-  </div>
-  <div class="row text-center" style="margin-top: 80px;">
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+    </main>
   
-      <h2>Veterinaria 1</h2>
-      <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-      <h2>Veterinaria 2</h2>
-      <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-  
-      <h2>Veterinaria 3</h2>
-      <p>And lastly this, the third column of representative placeholder content.</p>
-      <p><a class="btn btn-secondary" href="#">View details »</a></p>
-    </div><!-- /.col-lg-4 -->
-  </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1"></p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#"></a></li>
+      </ul>
+    </footer>
 </div>
-
-<!--LOS MAS PEDIDOS -->
-
-<div class="b-example-divider"></div>  <!--BARRA PARA DIVIDIR -->
-
-<div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold">Centered screenshot</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    
-  </div>
-</div>
-
-
-<div class="b-example-divider"></div>  <!--BARRA PARA DIVIDIR -->
-
-<div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold">Centered screenshot</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    <div class="container px-5">
-      <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-    </div>
-  </div>
-</div>
-
-
-
 
 
 
