@@ -12,12 +12,14 @@ function addToCarritoItem(e){
   const item = button.closest('.card')
   const itemTitle = item.querySelector('.card-title').textContent;
   const itemPrice = item.querySelector('.precio').textContent;
+  const itemDescr = item.querySelector('.description').textContent;
   const itemImg = item.querySelector('.card-img-top').src;
   
   const newItem = {
     title: itemTitle,
     precio: itemPrice,
     img: itemImg,
+    description: itemDescr,
     cantidad: 1
   }
 
@@ -62,7 +64,11 @@ function renderCarrito(){
             <td class="table__productos">
               <img src=${item.img}  alt="">
               <h6 class="title">${item.title}</h6>
-            </td>
+              </td>
+              <td>
+              <br>
+              <p class="detalle">${item.description}</p>
+              </td>
             <td class="table__price"><p>${item.precio}</p></td>
             <td class="table__cantidad">
               <input type="number" min="1" value=${item.cantidad} class="input__elemento">
@@ -130,10 +136,33 @@ function addLocalStorage(){
   localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
-window.onload = function(){
+window.onload = function(){ 
+
+  Producto()
+  Producto()
+  Producto()
   const storage = JSON.parse(localStorage.getItem('carrito'));
   if(storage){
     carrito = storage;
     renderCarrito()
   }
+}
+
+
+function Producto(url_img,nombre,descripcion,precio) {
+  
+  var Card = `<div class="col d-flex justify-content-center mb-4">
+  <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+  <h5 class="card-title pt-2 text-center text-primary">${nombre}</h5>
+  <img src="${url_img}" class="card-img-top" alt="...">
+  <div class="card-body">
+      <p class="card-text text-white-50 description">${descripcion}</p>
+      <h5 class="text-primary">Precio: <span class="precio">${precio}</span></h5>
+      <div class="d-grid gap-2">
+      <button  class="btn btn-primary button">Añadir a Carrito</button>
+  </div>
+  </div>
+  </div>
+</div>`;
+$("#cardProducto").append(Card);
 }
