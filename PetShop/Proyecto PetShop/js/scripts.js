@@ -141,18 +141,9 @@ function addLocalStorage(){
 
 window.onload = function(){ 
 
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
-  Producto()
+  ajaxCarrito()
+  
+
   const storage = JSON.parse(localStorage.getItem('carrito'));
   if(storage){
     carrito = storage;
@@ -171,10 +162,54 @@ function Producto(imagen,nombre,descripcion,precio) {
       <p class="card-text text-white-50 description">${descripcion}</p>
       <h5 class="text-primary">Precio: <span class="precio">${precio}</span></h5>
       <div class="d-grid gap-2">
-      <button style="background-color: #AC0000; border-color: red;" class="btn btn-primary button">Añadir a Carrito</button>
+      <button id="agregarcarrito" class="btn btn-danger button">Añadir a Carrito</button>
   </div>
   </div>
   </div>
 </div>`;
 $("#cardProducto").append(Card);
 }
+
+function ajaxCarrito() {
+  $.ajax({
+    url:'https://5000-kpbaldur-petshopapi-8avil1gl3kk.ws-us51.gitpod.io'+'/productos',
+    type:'GET',
+    dataType:'json',
+    success:function(respuesta){
+     console.log(respuesta)
+     $.each(respuesta,function(index,value){
+      Producto(value.imagen,value.nombre,value.descripcion,value.valor_venta)
+
+     }) 
+    }
+  })
+}
+
+function ajaxEnviarCarrito(cantidad,valor,descuento,estado,venta_id,producto_id) {
+
+  $.ajax({
+    url:'https://5000-kpbaldur-petshopapi-8avil1gl3kk.ws-us51.gitpod.io/detalles',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({
+      cantidad: cantidad,
+      valor: valor,
+      descuento: descuento,
+      estado: estado,
+      venta_id: venta_id,
+      producto_id: producto_id,
+      
+    }),
+    success: function(respuesta){
+        console.log(respuesta);
+    }
+})
+
+}
+
+$(document).on('click', '#agregarcarrito', function(){
+ ajaxEnviarCarrito(10,100,10,"1",1,1)
+  console.log ("hola")
+
+
+})
